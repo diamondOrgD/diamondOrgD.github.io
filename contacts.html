@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800,300' rel='stylesheet' type='text/css'><!-- Titles -->
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,900' rel='stylesheet' type='text/css'><!-- Articles -->
+
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/contacts.css"> <!-- Gem style -->
+    <link rel="stylesheet" href="css/owl.carousel.css"> <!-- Carousel -->
+	<script src="js/modernizr.custom.js"></script> <!-- Modernizr -->
+  	
+	<title>Contacts</title>
+</head>
+<body>
+
+	<!-- ..................... Header .......................... -->
+	<header>
+		<nav class="contacts-header-nav">
+			<div class="contacts-header-logo">
+				<img src="img/icons/main-logo-2.png">
+			</div>
+			<ul class="contacts-menu">
+				<li><a href="index.html">Питомник</a></li>
+				<li><a href="por.html">Порода</a></li>
+				<li><a href="articles.html">Статьи</a></li>
+				<li><a href="contacts.html">Контакты</a></li>
+			</ul>
+		</nav>
+	</header>
+	<!-- ...................................................... -->
+
+
+
+    <!-- ..................... Reviews .......................... -->
+<!--     <div class="reviews">
+        <div class="reviews-title">
+            <h2>Отзывы наших клиентов</h2>
+            <p>Мы дорожим нашей репутацией и всегда добиваемся того, клиенты остались довольны!</p>
+        </div>
+        <div class="reviews-content">
+            <div class="owl-carousel carous-wrap">
+              <div> Your Content </div>
+              <div> Your Content </div>
+              <div> Your Content </div>
+              <div> Your Content </div>
+              <div> Your Content </div>
+              <div> Your Content </div>
+              <div> Your Content </div>
+            </div>            
+        </div>
+    </div> -->
+
+
+
+
+
+
+    <!-- ..................... Content .......................... -->
+	<div class="contact-body">
+	<div class="clear"></div>
+		<div class="contact-container">
+			<div class="form"><!-- Формы -->
+                <div class="form-titles">
+                    <h2>Свяжитесь с нами</h2>
+                    <p>Получите консультацию от высокопрофессионального специалиста, который сможет ответить на все ваши вопросы.</p>
+                </div>
+                <div class="form-content">
+                    <div class="name-and-phone"><!-- Поля ввода -->
+                        <div class="name">
+                            <h4>Ваше имя</h4>
+                            <form>
+                                <input type="text">
+                            </form>
+                        </div>
+                        <div class="phone">
+                            <h4>Ваш мобильный телефон</h4>
+                            <form>
+                                <input type="text">
+                            </form>
+                        </div>
+                    </div><!-- Поля ввода -->
+                    <div class="order">
+                        <button type="submit"><span>Заказать консультацию</span></button>
+                    </div>
+                </div>         
+            </div><!-- Формы -->
+			<div class="contacts"><!-- Контакты -->
+				<div class="background-pattern"></div>            
+                <div class="contacts-inner">
+                    <ul>
+                        <li>
+                            <h5>Телефон</h5>
+                            <h6>+38 (050) 636-21-95</h6>
+                            <h6>+38 (050) 327-10-94</h6>
+                        </li>
+                        <li>
+                            <h5>Электронная почта</h5>
+                            <h6>black_diamante@gmail.com</h6>
+                        </li>
+                        <li>
+                            <h5>Skype</h5>
+                            <h6>black_diamante</h6>
+                        </li>
+                    </ul>
+                    <div class="contacts-social">
+                        <a href="#"><img src="img/social/cont-vk.png"></a>
+                        <a href="#"><img src="img/social/cont-tw.png"></a>
+                        <a href="#"><img src="img/social/cont-fb.png"></a>
+                        <a href="#"><img src="img/social/cont-gp.png"></a>
+                    </div>
+                </div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<script src="js/jquery.js"></script><!-- jQuery -->
+    <script src="js/classie.js"></script><!-- classie -->
+    <script src="js/owl.carousel.js"></script> <!-- Carousel -->
+
+    <script>
+    	/*-------------------------
+            Анимация хедера
+        ---------------------------*/
+         var cbpAnimatedHeader = (function() {
+    
+            var docElem = document.documentElement,
+                header = document.querySelector( '.contacts-header-nav' ),
+                didScroll = false,
+                changeHeaderOn = 1;
+    
+            function init() {
+                window.addEventListener( 'scroll', function( event ) {
+                    if( !didScroll ) {
+                        didScroll = true;
+                        setTimeout( scrollPage, 350 );
+                    }
+                }, false );
+            }
+    
+            function scrollPage() {
+                var sy = scrollY();
+                if ( sy >= changeHeaderOn ) {
+                    classie.add( header, 'contacts-header-nav-shrink' );
+                }
+                else {
+                    classie.remove( header, 'contacts-header-nav-shrink' );
+
+                }
+                didScroll = false;
+            }
+    
+            function scrollY() {
+                return window.pageYOffset || docElem.scrollTop;
+            }
+    
+            init();
+    
+        })();
+
+
+        $(document).ready(function(){
+  $('.owl-carousel').owlCarousel();
+});
+    </script>
+
+</body>
+</html>
+
+
+	
